@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>JQuery Mobile</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js">
+	<script type="text/javascript" src="js/spike.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+	<div data-role="header" data-fullscreen="true" data-theme="a">
+		<a href="http://jquerymobile.com/demos/1.0" data-icon="arrow-l" data-theme="b">API</a> 
+		<h1>JQuery</h1>
+		<a href="http://jquerymobile.com/demos/1.0/docs/api/themes.html" data-icon="arrow-r" data-theme="a">Themes</a> 		
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview" data-inset="true" data-filter="true">
+			<li><a href="/form/Quem">Quem <span class="ui-li-count">1</span></a></li>
+			<li><a href="/when/Quando">Quando? <span class="ui-li-count">0</span></a></li>
+			<li><a href="/where/Onde">Onde?</a> <span class="ui-li-count">0</span></li>
+			<li><a href="/form/Por Que">Por que? <span class="ui-li-count">0</span></a></li>
+			<li><a href="/form/Como">Como? <span class="ui-li-count">0</span></a></li>
+		</ul>
+
+		<div>
+			<label for="slider-0">Input slider:</label>
+   			<input type="range" name="slider" id="slider-0" value="25" min="0" max="100"  />
+   		</div>
+
+		<br>
+	
+		<label>Lista de Produtos</label>
+		<div data-role="collapsible-set" data-content-theme="c">
+
+	   	   	<div data-role="collapsible" data-content-theme="a">
+		    <h3>Refrigerante</h3>
+		   	     
+		   	     <div data-role="collapsible" data-content-theme="b">
+			     <h3>Coca-Cola</h3>
+				      
+				      <div data-role="collapsible" data-content-theme="a">
+				       <h3>Preço</h3>
+				      </div>
+					  
+					  <div data-role="collapsible" data-content-theme="a">
+				       <h3>Sabor</h3>
+				      </div>
+			  	 </div>
+		   		
+		   	     <div data-role="collapsible" data-content-theme="b">
+			     <h3>Pepsi</h3>
+					
+					<div data-role="collapsible" data-content-theme="a">
+				      <h3>Preço</h3>
+				    </div>
+					
+					<div data-role="collapsible" data-content-theme="a">
+				      <h3>Sabor</h3>
+				    </div>
+			    </div>  
+			    
+		    </div> <!--Refrigerantes -->
+	   	   
+	   	   <div data-role="collapsible" data-content-theme="e">
+		   <h3>Achocolatado</h3>
+		   	  
+		   	  <div data-role="collapsible" data-content-theme="f">
+			   <h3>Nescau</h3>
+			   <div>Vai certo!</div>
+			  </div>
+		   		
+		   	  <div data-role="collapsible" data-content-theme="a">
+			    <h3>Quick</h3>
+				<div>Pode ser</div>
+			  </div>
+			  
+		   </div>			
+		   
+	  </div>						
+
+		<label> Coisas </label>
+		<div data-role="collapsible-set" data-content-theme="c">
+   			<div data-role="collapsible" data-collapsed="false" data-content-theme="c">
+			<h3>Primeira Coisa</h3>
+			<p>Coisa um!</p>
+			</div>
+	
+			<div data-role="collapsible" data-content-theme="c">
+			<h3>Segunda Coisa</h3>
+			<p>Coisa dois</p>
+	   </div>
+ 		
+</div>
+
+<div data-role="footer" data-fullscreen="true" data-theme="a" >
+	<a href="index.html" data-role="button" data-icon="arrow-l">Up</a>
+	<a href="index.html" data-role="button" data-icon="arrow-r">Down</a>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$('#change_theme').bind('click', function(){
+	
+		var theme = $('#change_theme').attr('data-theme');
+		alert(theme);
+		var nextTheme = 'a';
+		switch(theme)
+		{
+	  		case 'a': nextTheme = 'b';
+		  	break;
+		  case 'b': nextTheme = 'c';
+	  		break;
+		  case 'c': nextTheme = 'd';
+		  	break;
+	  	  case 'd': nextTheme = 'e';
+		  	break;	  	
+		  default: nextTheme = 'a';
+		    break;
+		}
+	
+		alert(nextTheme);	
+		$('#change_theme').attr('data-theme',nextTheme);
+		$('#change_theme').load();
+	
+	});
+});
+</script>
+</body
+
+
+</html

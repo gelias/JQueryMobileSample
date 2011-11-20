@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>Quem</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js">
+	<script type="text/javascript" src="js/spike.js"></script>
+</head>
+<body>
+<div data-role="page">
+ 	<div data-role="header" data-fullscreen="true" data-theme="a" data-position="fixed">
+		<a href="/" data-icon="arrow-l" data-theme="b">Home</a> 
+		<h1><%= params[:link] %></h1></h1>
+	</div>
+	
+			<div data-role="fieldcontain">
+		         <label for="name">Endereço:</label>
+		         <input type="text" name="local" id="local" value="Fernando de Noronha"  />
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="textarea">Tarefa:</label>
+				<textarea cols="40" rows="8" name="task" id="task"></textarea>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="slider">Gostou?</label>
+				<select name="slider" id="slider" data-role="slider">
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="slider">Quantidade:</label>
+				 <input type="range" name="slider" id="slider" value="0" min="0" max="100"  />
+			</div>
+
+
+			<div data-role="fieldcontain">
+				<label for="select-choice-1" class="select">Melhor Time:</label>
+				<select name="select-choice-1" id="select-choice-1">
+					<option value="standard">Grêmio</option>
+					<option value="rush">São Paulo</option>
+					<option value="express">Criciúma</option>
+					<option value="overnight">Sport</option>
+				</select>
+			</div>
+
+
+			<div class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+					<div class="ui-block-a"><button type="submit" data-theme="d">Cancelar</button></div>
+					<div class="ui-block-b"><button type="submit" data-theme="b">Cadastrar</button></div>
+		    </fieldset>
+			</div>
+	</div>
+</body>
+</html>
