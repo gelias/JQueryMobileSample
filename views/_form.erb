@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>Quem</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js">
+	<script type="text/javascript" src="js/spike.js"></script>
+</head>
+<body>
+<div data-role="page">
+ 	<div data-role="header" data-fullscreen="true" data-theme="a" data-position="fixed">
+		<a href="/" data-icon="arrow-l" data-theme="b">Home</a> 
+		<h1><%= params[:link] %></h1></h1>
+	</div>
+	
+	<div data-role="footer">		
+		<div data-role="navbar">
+		<ul>
+			<li><a id="pessoal" href="#" data-icon="gear" data-iconpos="top">Pessoal</a></li>
+			<li><a id="profissional" href="#" data-icon="grid" data-iconpos="top">Profissional</a></li>
+			<li><a id="foto" href="#" data-icon="home" data-iconpos="top">Foto</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="pessoal_div" style="display:none">
+		<span>Guilherme Elias</span>
+	</div>
+	
+	<div id="profissional_div" style="display:none">
+		<span>Desenvolvedor</span>
+	</div>
+	
+	<div id="foto_div" style="display:none">
+		<img src="http://en.gravatar.com/userimage/20337907/431ae10b8700e30b2d09a5bc41904d2b.jpeg" />
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$('#pessoal').bind('click',function(){
+		$('#pessoal_div').removeAttr('style');
+		$('#profissional_div').removeAttr('style').attr('style','display:none');
+		$('#foto_div').removeAttr('style').attr('style','display:none');
+	});
+	
+	$('#profissional').bind('click',function(){
+		$('#profissional_div').removeAttr('style');
+		$('#pessoal_div').removeAttr('style').attr('style','display:none');
+		$('#foto_div').removeAttr('style').attr('style','display:none');
+	});
+	
+	$('#foto').bind('click',function(){
+		$('#foto_div').removeAttr('style');
+		$('#profissional_div').removeAttr('style').attr('style','display:none');
+		$('#pessoal_div').removeAttr('style').attr('style','display:none');
+	});
+});
+</script>
+
+</body>
+</html>
